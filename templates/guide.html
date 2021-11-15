@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% block header %}
+        <header class="masthead" style="background-image: url({{ url_for('static', filename='assets/img/about.jpg') }})">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-md-10 mx-auto">
+                        <div class="page-heading">
+                            <h1>Guidance For You</h1>
+                            <br>
+
+                            <div class="row">
+                                <div class="col">
+
+                                    <button id="watch">to-watch list</button>
+                                    <script>
+                                        document.querySelector('#watch')
+                                        .addEventListener('click', () => {
+                                            window.location.href ='/post';
+                                        });
+                                    </script>
+
+                                </div>
+                                <div class="col">
+
+                                    <button id="read">to-read list</button>
+                                    <script>
+                                        document.querySelector('#read')
+                                        .addEventListener('click', () => {
+                                            window.location.href ='/post';
+                                        });
+                                    </script>
+
+                                </div>
+                                <div class="col">
+
+                                    <button id="listen">to-listen list</button>
+                                    <script>
+                                        document.querySelector('#listen')
+                                        .addEventListener('click', () => {
+                                            window.location.href ='/post';
+                                        });
+                                    </script>
+
+                                </div>
+                            </div> 
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+
+                        <button id="help">I NEED MORE HELP!</button>
+                        <script>
+                            document.querySelector('#help')
+                            .addEventListener('click', () => {
+                                window.location.href ='/join';
+                            });
+                        </script>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            </div>
+        </header>
+{% endblock %}
+{% block content %}
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nostrum ullam eveniet pariatur voluptates odit, fuga atque ea nobis sit soluta odio, adipisci quas excepturi maxime quae totam ducimus consectetur?</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius praesentium recusandae illo eaque architecto error, repellendus iusto reprehenderit, doloribus, minus sunt. Numquam at quae voluptatum in officia voluptas voluptatibus, minus!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut consequuntur magnam, excepturi aliquid ex itaque esse est vero natus quae optio aperiam soluta voluptatibus corporis atque iste neque sit tempora!</p>
+                </div>
+            </div>
+        </div>
+        <hr />
+{% endblock %}

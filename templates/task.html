@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block header %}
+
+<header class="masthead" style="background-image: url({{ url_for('static', filename='assets/img/contact.jpg') }})">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="page-heading">
+                    <h1>To-do Task</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</header>
+{% endblock %}
+
+{% block content %}
+<div>
+
+
+        <table border=1 width=46% style="margin-left: auto; margin-right: auto;">
+            <tr>
+                <th style="text-align: center;">Task</th>
+                <th style="text-align: center;">Time</th>
+                <th style="text-align: center;">Actions</th>
+            </tr>
+            {% for task in tasks %}
+                <tr>    
+                    <td style="text-align: center;">{{ task.content }}</td>
+                    <td style="text-align: center;">{{ task.date_created.date() }}</td>
+                    <td>
+                        <a href="/delete/{{task.id}}" style="text-align: center; display: block;">Delete</a>
+                        <a href="/update/{{task.id}}" style="text-align: center; display: block;">Update</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+    <br>
+        <div class="form">          
+            <form action="/task" method="POST">
+                <div class="form">
+                 <input type="text" class="form-control" name="content" style="margin:0px auto; width: 30%;">
+                </div>  
+                <br>
+               <button type="submit" class="btn btn-primary" style="text-align: center; display: flex; margin: auto;">Add Task</button>
+            </form> 
+        </div>
+
+
+
+</div>
+{% endblock %}

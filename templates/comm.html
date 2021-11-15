@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+{% block header %}
+<header class="masthead" style="background-image: url({{ url_for('static', filename='assets/img/contact.jpg') }})">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="page-heading">
+                    <h1>Supportive Community</h1>
+                    <br>
+                    <span class="subheading">You Are Not Alone</span>
+                    <br>
+<!-- 1st Event Listener -->
+                    <button id="redirect">I WANT TO JOIN!</button>
+                    <script>
+                        document.querySelector('#redirect')
+                        .addEventListener('click', () => {
+                            window.location.href ='/join';
+                        });
+                    </script>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+{% endblock %}
+
+
+{% block content %}
+<div class="overlay"></div>
+<div class="container">
+<div class="row">
+<div class="col-lg-8 col-md-10 mx-auto">
+<!-- (1) Post Preview -->
+    <div class="post-preview">
+        <a href="/post">
+            <h2 class="post-title">I've been doubting myself since he left.</h2>
+            <h3 class="post-subtitle">am i the reason why he left?</h3>
+        </a>
+        <!-- 2nd Event Listener -->
+        <a class="btn btn-primary active float-right" role="button" aria-pressed="true" id="relate">i can relate</a>
+        <script>
+            document.querySelector('#relate')
+            .addEventListener('click', () => {
+                window.location.href ='/post';
+            });
+        </script>
+        <p class="post-meta">
+            Posted by
+            <a href="#!">Allison</a>
+            on November 14, 2021
+        </p>
+    </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Divider -->
+<hr class="my-4" />
+<!-- (2) Post Preview -->
+<div class="overlay"></div>
+<div class="container">
+<div class="row">
+<div class="col-lg-8 col-md-10 mx-auto">
+    <div class="post-preview">
+        <a href="/post">
+            <h2 class="post-title">I don't wanna do anything but crying.</h2>
+            <h3 class="post-subtitle">how can I survive?</h3>
+        </a>
+        <a class="btn btn-primary active float-right" role="button" aria-pressed="true">i can relate</a>
+        <p class="post-meta">
+            Posted by
+            <a href="#!">Lucy</a>
+            on November 14, 2021
+        </p>
+
+    </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Divider -->
+<hr class="my-4" />
+<!-- (3) Post Preview -->
+<div class="overlay"></div>
+<div class="container">
+<div class="row">
+<div class="col-lg-8 col-md-10 mx-auto">
+    <div class="post-preview">
+        <a href="/post">
+            <h2 class="post-title">He left me for another girl.</h2>
+            <h3 class="post-subtitle">it is more than devastating.</h3>
+        </a>
+        <a class="btn btn-primary active float-right" role="button" aria-pressed="true">i can relate</a>
+        <p class="post-meta">
+            Posted by
+            <a href="#!">Tina</a>
+            on November 15, 2021
+        </p>
+
+    </div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+{% endblock %}

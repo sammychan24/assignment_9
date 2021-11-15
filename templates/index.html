@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block header %}
+  <!-- Page Header-->
+  <header class="masthead" style="background-image: url({{url_for('static', filename='assets/img/home.jpg')}})">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="site-heading">
+                    <h1>Broken Hearts Club</h1>
+                    <br>
+                    <a class="btn btn-primary btn-lg active" role="button" aria-pressed="true" href='/join'>JOIN NOW</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+{% endblock %}
+{% block content %}
+<!-- Main Content-->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="post-preview">
+                <a href="/comm">
+                    <h2 class="post-title">YOU ARE NOT ALONE</h2>
+                    <h3 class="post-subtitle">find support</h3>
+                </a>
+                <br>
+                <a href="/comm"><img class="img-fluid" src="{{ url_for('static', filename='assets/img/support.jpg')}}" alt="..." /></a>
+                <span class="caption text-muted">You’re always with yourself, so you might as well enjoy the company。 -Diane von Furstenberg</span>
+            </div>
+            <hr />
+
+            <div class="post-preview">
+                <a href="/guide">
+                    <h2 class="post-title">YOU CAN MOVE ON</h2>
+                    <h3 class="post-subtitle">find help</h3>
+                </a>
+                <br>
+                <a href="/guide"><img class="img-fluid" src="{{ url_for('static', filename='assets/img/free.jpg')}}" alt="..." /></a>
+                <span class="caption text-muted">The worst loneliness is to not be comfortable with yourself. -Mark Twain</span>
+            </div>
+            <hr />
+
+            <div class="post-preview">
+                <a href="/shop">
+                    <h2 class="post-title">FOCUS ON YOURSELF</h2>
+                    <h3 class="post-subtitle">find treatment</h3>
+                </a>
+                <br>
+                <a href="/shop"><img class="img-fluid" src="{{ url_for('static', filename='assets/img/love.jpg')}}" alt="..." /></a>
+                <span class="caption text-muted">How you love yourself is how you teach others to love you. -Rupi Kaur</span>
+            </div>
+            <hr />
+
+            <!-- Pager-->
+            <div class="clearfix"><a class="btn btn-primary float-right" href="/join">Become a loved member</a></div>
+        </div>
+    </div>
+</div>
+<hr />
+ </div>
+{% endblock %}
